@@ -1,13 +1,24 @@
 import React from 'react';
 
-const Form = () => (
-  <form>
-    First Name: <input type="text"></input>
-    Last Name: <input type="text"></input>
-    Email: <input type="email"></input>
-    dob: <input type="number"></input>
-    <button type="submit"></button>
-  </form>
-)
+class Form extends React.Component {
+
+  onHandleSubmit(e) {
+    e.preventDefault()
+    alert("works")
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.onHandleSubmit}>
+        First Name: <input type="text"></input>
+        Last Name: <input type="text"></input>
+        Email: <input type="email"></input>
+        dob: <input type="number"></input>
+        <button type="submit">Create New User</button>
+      </form>
+    )
+  }
+}
+
 
 export default Form

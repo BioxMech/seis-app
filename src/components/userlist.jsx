@@ -45,7 +45,7 @@ class UserList extends React.Component {
             {
               this.props.data.filter(user => user.firstName.toLowerCase().includes(this.state.search))
               .map(user => (
-                <tr>
+                <tr key={user.id}>
                   <td>
                     {user.id}
                   </td>

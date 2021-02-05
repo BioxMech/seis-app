@@ -13,20 +13,22 @@ class Home extends React.Component {
       loading: true,
       userList: [],
       pageNum: 1,
-      active: 1
+      active: 1,
+      displayList: []
     }
 
     this.onPageChange = this.onPageChange.bind(this)
   }
 
   componentDidMount() {
-    fetch("http://localhost:5000/users?_sort=id?_limit=10&_page=1")
+    fetch("http://localhost:5000/users?_sort=id")
       .then(res => res.json())
       .then(users => {
         this.setState({
           userList: users,
+          displayList: users.slice(0, 10),
           loading: false,
-          pageLength: Math.ceil(users.length / 10)
+          pageLength: Math.floor(users.length / 10)
         })
       })
   }
@@ -36,7 +38,7 @@ class Home extends React.Component {
       .then(res => res.json())
       .then(users => {
         this.setState({
-          userList: users,
+          displayList: users,
           loading: false,
           pageNum: e.target.innerText,
           active: parseInt(e.target.innerText)
@@ -66,7 +68,7 @@ class Home extends React.Component {
               <CreateForm id={this.state.userList[this.state.userList.length - 1].id} data={this.state.userList} />
             </Col>
             <Col xs={12} className="my-3">
-              <UserList data={this.state.userList} />
+              <UserList data={this.state.displayList} />
             </Col>
           </Row>
         }

@@ -5,7 +5,7 @@ Follow these steps below and you will be able to run the application on your loc
   Clone the repo on to your computer
   </li>
   <li>
-  Open up a terminal (Can be your command prompt or whatever terminal that is provided by your IDE) 
+  Open up a terminal and go to your folder (Can be your command prompt or any other terminal that is provided by your IDE) 
   </li>
   <li>
   Enter "yarn" into the terminal to download all the required dependencies for this project
@@ -26,6 +26,9 @@ Follow these steps below and you will be able to run the application on your loc
 </ol>
 
 # Additional Information
+## Key Note
+The json-server at times will have sudden slowdowns, the data will not update immediately. The UPDATE function has the highest chance of encountering, but fret not, it still works as intended.
+
 ## Dependencies
 <ul>
   <li>
@@ -91,8 +94,8 @@ There were several assumptions I made due to certain constraints. The following 
 <ol>
 <li>There is only 1 search fill (firstName)
 </li>
-<li>Users can create duplicate data (The only unique key is the ID which is the Primary Key)</li>
-<li>DOB only takes in 8 numbers
+<li>Users can create duplicate data (The only unique key is the ID (#) which is the Primary Key of the user)</li>
+<li>DOB can be any number and length
 </li>
 <li>All emails are correct as long as it contains an "@" 
 </li>

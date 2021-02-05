@@ -37,7 +37,7 @@ class UpdateForm extends React.Component {
 
   onHandleSubmit(e) {
     e.preventDefault()
-    console.log(this.state)
+    // console.log(this.state)
     fetch("http://localhost:5000/users/" + this.state.user.id, {
       method: "PUT",
       headers: {
@@ -50,9 +50,8 @@ class UpdateForm extends React.Component {
   }
 
   handleChange = e => {
-    // if (this.props.data)
     this.setState({ user: { ...this.state.user, [e.target.name]: e.target.value }});
-    console.log(this.state.user)
+    // console.log(this.state.user)
   }
 
   render() {

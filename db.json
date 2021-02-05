@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "DoDoe",
-      "email": "john.doe@gmail.com",
-      "dob": 1595493789
-    },
-    {
       "id": 2,
       "firstName": "Michael",
       "lastName": "Tan",

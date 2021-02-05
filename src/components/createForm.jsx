@@ -35,7 +35,7 @@ class CreateForm extends React.Component {
 
   handleChange = e => {
     this.setState({ user: {...this.state.user, [e.target.name]: e.target.value }});
-    console.log(this.state)
+    // console.log(this.state)
   }
 
   render() {

@@ -30,7 +30,7 @@ class DeleteUser extends React.Component {
   }
 
   onHandleClick() {
-    console.log(this.state)
+    // console.log(this.state)
     fetch("http://localhost:5000/users/" + this.state.user.id, {
       method: "DELETE",
       headers: {
